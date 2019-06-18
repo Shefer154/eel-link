@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+<style type="text/css">
+	html,body{
+  height:100%;
+}
+body{
+  text-align:center;
+}
+body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align: middle;
+  margin-top: 50px;
+  margin-bottom: -400px;
+}
+button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:100px;
+  width: 300px;
+  font-size:1.6em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+  
+}
+</style>
+</head>
+<body style="overflow: hidden;">
+
+<style type="text/css">
+.mytext{
+top:30%;
+position: absolute;
+font-size:200px ;
+left: 70%;
+font-weight: 700;
+cursor: pointer;
+transition: 0.3s;
+}
+</style>
+<div style="height: 100vh;width: 50%;left: 0;background-color: black;z-index: 99999!important;position: absolute;transition: 1s" id="div1"><span id="hello" class="mytext" style="color: white;right:0!important">UI</span></div>
+<div style="height: 100vh;width: 50%;right:0!important;background-color: white;z-index: 99999!important;position: absolute;transition: 1s" id="div2"><span id="hello1" class="mytext" style="left:0!important">ET</span></div>
+<div class="container">
+<button onclick="location.href='pass.html'">Admin</button><br>
+<button onclick="location.href='attendancelog.html'">Student</button>
+</div>
+<script type="text/javascript">
+$("#hello,#hello1").hover(function(){
+        $("#hello,#hello1").css("transform","scale(1.1)");
+          },
+        function(){
+         $("#hello,#hello1").css("transform","scale(1)");
+       });
+$("#hello,#hello1").click(function(){
+$("#div1").css("left","-1000px");
+$("#div2").css("right","-1000px");
+});
+</script>
+</body>
+</html>
